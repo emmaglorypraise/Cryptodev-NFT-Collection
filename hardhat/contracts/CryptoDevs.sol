@@ -4,7 +4,7 @@ pragma solidity ^0.8.4;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract CrptoDev is ERC721Enumerable, Ownable {
+contract CryptoDevs is ERC721Enumerable, Ownable {
     string _baseTokenURI;
 
     uint256[] public mintedIds;
@@ -19,7 +19,7 @@ contract CrptoDev is ERC721Enumerable, Ownable {
     uint256 public tokenIds;
 
     // ERC721 constructor takes in a `name` and a `symbol` to the token collection.
-    constructor (string memory baseURI) ERC721("Crypto Dev", "CDT") {
+    constructor (string memory baseURI) ERC721("Crypto Dev Token", "CDT") {
         _baseTokenURI = baseURI;
     }
 
@@ -27,7 +27,7 @@ contract CrptoDev is ERC721Enumerable, Ownable {
     function mint(uint _id) public payable {
         require(_id != 0);
         require(_id <= 20);
-        require(tokenIds < maxTokenIds, "Exceeded maximum Crypto Dev NFT supply");
+        require(tokenIds < maxTokenIds, "Exceeded maximum Crypto Dev Token supply");
         require(msg.value >= _price, "Ether sent is not correct");
         tokenIds += 1;
         mintedIds.push(_id);

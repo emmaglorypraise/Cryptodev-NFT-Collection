@@ -5,11 +5,6 @@ export const abi = [
         "internalType": "string",
         "name": "baseURI",
         "type": "string"
-      },
-      {
-        "internalType": "address",
-        "name": "whitelistContract",
-        "type": "address"
       }
     ],
     "stateMutability": "nonpayable",
@@ -115,19 +110,6 @@ export const abi = [
   },
   {
     "inputs": [],
-    "name": "_paused",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "_price",
     "outputs": [
       {
@@ -196,6 +178,19 @@ export const abi = [
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "getArrp",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "address",
@@ -233,10 +228,35 @@ export const abi = [
     "type": "function"
   },
   {
-    "inputs": [],
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
     "name": "mint",
     "outputs": [],
     "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "mintedIds",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -279,39 +299,6 @@ export const abi = [
         "internalType": "address",
         "name": "",
         "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "presaleEnded",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "presaleMint",
-    "outputs": [],
-    "stateMutability": "payable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "presaleStarted",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
       }
     ],
     "stateMutability": "view",
@@ -389,26 +376,6 @@ export const abi = [
       }
     ],
     "name": "setApprovalForAll",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "bool",
-        "name": "val",
-        "type": "bool"
-      }
-    ],
-    "name": "setPaused",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "startPresale",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -582,4 +549,4 @@ export const abi = [
   }
 ]
   
-export const NFT_CONTRACT_ADDRESS = "0x2775Fe44029DA6763A2f74509bF74cd314C436cc"
+export const NFT_CONTRACT_ADDRESS = "0x2fFAA8966dfa02C308065d5075eC159DD7244323"
